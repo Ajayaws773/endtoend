@@ -40,11 +40,6 @@ pipeline {
           version: '2.5-SNAPSHOT'
        }
      }
-     stage('deploy') {
-       steps {
-          deploy adapters: [tomcat9(credentialsId: 'tomcatusr', path: '', url: 'http://65.0.5.251:8080/')], contextPath: null, war: '**/*.war'
-       }
-     }
 
 
      }
